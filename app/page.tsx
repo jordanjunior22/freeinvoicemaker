@@ -84,7 +84,7 @@ export default function HomePage() {
                 </h1>
                 <p className="text-purple-300 text-sm flex items-center gap-2">
                   <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                  100% Free Forever
+                  100% Free Forever | Make Invoice 4 Free
                 </p>
               </div>
             </div>

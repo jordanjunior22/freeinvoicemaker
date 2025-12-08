@@ -16,7 +16,8 @@ export const metadata = {
     "download invoice PDF",
     "freelancer invoice",
     "business invoice maker",
-    "professional invoice templates"
+    "professional invoice templates",
+    "Make Invoice 4 Free"
   ],
   alternates: {
     canonical: "https://makeinvoice4free.site",
