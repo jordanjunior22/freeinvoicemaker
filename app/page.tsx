@@ -19,6 +19,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+      {/* JSON-LD Schema (SEO) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -28,9 +30,11 @@ export default function HomePage() {
             name: "Invoice Maker Pro",
             url: "https://makeinvoice4free.site",
             description:
-              "Free online invoice generator for freelancers and businesses. Create invoices instantly and export PDF.",
+              "Free online invoice maker, invoice generator, and PDF creator for freelancers and businesses.",
             applicationCategory: "FinanceApplication",
             operatingSystem: "All",
+            keywords:
+              "online invoice maker, invoice maker online free, invoice generator free, free invoice app, receipt maker",
             offers: {
               "@type": "Offer",
               price: "0",
@@ -39,6 +43,7 @@ export default function HomePage() {
           }),
         }}
       />
+
       {/* Header */}
       <header className="bg-black/30 backdrop-blur-lg border-b border-purple-500/20">
         <div className="container mx-auto px-4 py-6">
@@ -79,24 +84,21 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section (SEO Optimized) */}
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h2 className="text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent leading-tight">
-            Create Professional Invoices
+            Free Online Invoice Maker & PDF Generator
           </h2>
           <p className="text-xl text-purple-200 max-w-2xl mx-auto">
-            Beautiful templates, instant generation, completely free.
-            <span className="block mt-2 text-pink-300 font-semibold">No sign-up required. No hidden fees.</span>
+            Create invoices instantly using our free invoice generator. Customize templates,
+            download as PDF, and manage everything online — no signup required.
+            <span className="block mt-2 text-pink-300 font-semibold">Fast. Simple. Professional.</span>
           </p>
         </div>
 
         {/* Language & Template Selectors */}
         <div className="mb-8 space-y-4">
-          {/* <LanguageSelector
-            selectedLanguage={language}
-            onSelectLanguage={setLanguage}
-          /> */}
           <TemplateSelector
             selectedTemplate={template}
             onSelectTemplate={setTemplate}
@@ -109,27 +111,38 @@ export default function HomePage() {
           <InvoicePreview invoice={invoice} template={template} />
         </div>
       </div>
+
+      {/* SEO Content Section */}
       <section className="container mx-auto px-4 mt-16 text-purple-200 max-w-3xl">
         <h2 className="text-3xl font-bold text-white mb-4">
-          Why Use Invoice Maker Pro?
+          Free Online Invoice Generator — Fast, Simple, Professional
         </h2>
         <p className="mb-4">
-          Invoice Maker Pro is a free online invoice generator designed for
-          freelancers, small businesses, and professionals who need fast,
-          clean, and professional invoices. With customizable templates,
-          instant PDF downloads, and zero signup requirements, you can
-          create invoices in seconds.
+          Invoice Maker Pro is a powerful and free invoice maker built for freelancers,
+          small businesses, and professionals who need high-quality invoices quickly.
+          Create unlimited invoices with our easy-to-use invoice generator and download
+          them instantly as PDFs.
         </p>
+
         <h3 className="text-2xl font-semibold text-white mt-6 mb-4">
-          Features of Our Free Invoice Generator
+          Why Millions Search for “Online Invoice Maker”
         </h3>
         <ul className="list-disc pl-6 space-y-2">
+          <li>100% Free invoice generator</li>
+          <li>Works instantly — no account needed</li>
           <li>Professional invoice templates</li>
-          <li>Instant PDF export</li>
-          <li>Multi-language support</li>
-          <li>Works on all devices</li>
-          <li>Completely free, no account needed</li>
+          <li>Perfect for freelancers & small businesses</li>
+          <li>Supports tax, discounts, logos, & more</li>
         </ul>
+
+        <h3 className="text-2xl font-semibold text-white mt-6 mb-4">
+          Additional Tools Included
+        </h3>
+        <p>
+          Invoice Maker Pro also functions as a free <strong>receipt maker</strong>,
+          <strong> bill maker</strong>, and <strong>PDF generator</strong>. Create
+          clean, professional documents in seconds — completely free.
+        </p>
       </section>
 
       {/* Footer */}
@@ -142,38 +155,23 @@ export default function HomePage() {
                 About Us
               </h3>
               <p className="text-purple-300 leading-relaxed">
-                Invoice Maker Pro is a 100% free tool designed to help freelancers,
-                small businesses, and professionals create stunning invoices in seconds.
+                Invoice Maker Pro is a 100% free tool designed to help freelancers
+                and businesses create beautiful invoices in seconds.
               </p>
             </div>
 
             <div>
               <h3 className="text-xl font-bold text-white mb-4">Features</h3>
               <ul className="space-y-2 text-purple-300">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-                  Multiple professional templates
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-                  Multi-language support
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-                  Instant PDF generation
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-purple-400 rounded-full"></span>
-                  No registration needed
-                </li>
+                <li>Professional templates</li>
+                <li>Instant PDF downloads</li>
+                <li>Multi-language support</li>
+                <li>No registration needed</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-bold text-white mb-4">Contact & Support</h3>
-              <p className="text-purple-300 mb-4">
-                Have suggestions or feedback? We'd love to hear from you!
-              </p>
               <a
                 href="mailto:coachcratft.space@gmail.com"
                 className="inline-flex items-center gap-2 text-pink-300 hover:text-pink-200 transition-colors"
@@ -181,14 +179,15 @@ export default function HomePage() {
                 <Mail className="w-5 h-5" />
                 coachcratft.space@gmail.com
               </a>
+
               <div className="mt-6">
-                <p className="text-purple-300 mb-3">Love this tool? Help us improve!</p>
+                <p className="text-purple-300 mb-3">Love this tool? Support our work!</p>
                 <button
                   onClick={handleDonate}
-                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-lg text-white font-semibold shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all duration-300"
+                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-lg text-white font-semibold shadow-lg"
                 >
                   <Heart className="w-5 h-5" />
-                  Support Our Work
+                  Donate
                 </button>
               </div>
             </div>
@@ -200,7 +199,7 @@ export default function HomePage() {
               <Heart className="w-4 h-4 inline text-pink-400" /> for the community.
             </p>
             <p className="text-purple-400 mt-2 font-semibold">
-              100% Free. Forever.
+              Always Free. Forever.
             </p>
           </div>
         </div>
