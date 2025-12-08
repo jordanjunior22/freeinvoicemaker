@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InvoiceForm from "./components/InvoiceForm";
 import InvoicePreview from "./components/InvoicePreview";
 import TemplateSelector from "./components/TemplateSelector";
@@ -12,7 +12,33 @@ export default function HomePage() {
   const [invoice, setInvoice] = useState<Invoice | undefined>(undefined);
   const [template, setTemplate] = useState<"classic" | "modern" | "minimalist">("classic");
   const [language, setLanguage] = useState<string>("en");
+    const [isMobile, setIsMobile] = useState(false);
+ // 🔥 Detect mobile or tablet screens
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
 
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+  // 🔥 If mobile/tablet → Show message
+  if (isMobile) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6 text-center">
+        <div className="bg-black/30 px-8 py-10 rounded-2xl border border-purple-500/40 shadow-lg max-w-md">
+          <Sparkles className="w-10 h-10 text-purple-300 mx-auto mb-4" />
+          <h1 className="text-3xl font-bold text-white mb-4">Please Use a PC</h1>
+          <p className="text-purple-200 text-lg leading-relaxed">
+            Invoice Maker Pro works best on desktop screens.  
+            For the full experience, please open this website on a PC or laptop.
+          </p>
+        </div>
+      </div>
+    );
+  }
   const handleDonate = () => {
     window.open("https://www.paypal.com/donate/?hosted_button_id=45H6D5YWWM9YA", "_blank");
   };
