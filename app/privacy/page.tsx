@@ -1,6 +1,6 @@
 export default function PrivacyPolicy() {
   return (
-    <div className="container mx-auto px-4 py-12 text-purple-200 max-w-3xl">
+    <div className="bg-black mx-auto px-4 py-12 text-purple-200 max-w-3xl">
       <h1 className="text-4xl font-bold text-white mb-6">Privacy Policy</h1>
       <p>Last Updated: {new Date().getFullYear()}</p>
 
