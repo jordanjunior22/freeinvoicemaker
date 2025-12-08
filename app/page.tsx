@@ -172,64 +172,87 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black/40 backdrop-blur-lg border-t border-purple-500/20 mt-16">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-purple-400" />
-                About Us
-              </h3>
-              <p className="text-purple-300 leading-relaxed">
-                Invoice Maker Pro is a 100% free tool designed to help freelancers
-                and businesses create beautiful invoices in seconds.
-              </p>
-            </div>
+     {/* Footer */}
+<footer className="bg-black/40 backdrop-blur-lg border-t border-purple-500/20 mt-16">
+  <div className="container mx-auto px-4 py-12">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <Sparkles className="w-5 h-5 text-purple-400" />
+          About Us
+        </h3>
+        <p className="text-purple-300 leading-relaxed">
+          Invoice Maker Pro is a 100% free tool designed to help freelancers
+          and businesses create beautiful invoices in seconds.
+        </p>
+      </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4">Features</h3>
-              <ul className="space-y-2 text-purple-300">
-                <li>Professional templates</li>
-                <li>Instant PDF downloads</li>
-                <li>Multi-language support</li>
-                <li>No registration needed</li>
-              </ul>
-            </div>
+      <div>
+        <h3 className="text-xl font-bold text-white mb-4">Features</h3>
+        <ul className="space-y-2 text-purple-300">
+          <li>Professional templates</li>
+          <li>Instant PDF downloads</li>
+          <li>Multi-language support</li>
+          <li>No registration needed</li>
+        </ul>
+      </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4">Contact & Support</h3>
-              <a
-                href="mailto:coachcratft.space@gmail.com"
-                className="inline-flex items-center gap-2 text-pink-300 hover:text-pink-200 transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                coachcratft.space@gmail.com
-              </a>
+      <div>
+        <h3 className="text-xl font-bold text-white mb-4">Contact & Support</h3>
+        <a
+          href="mailto:coachcratft.space@gmail.com"
+          className="inline-flex items-center gap-2 text-pink-300 hover:text-pink-200 transition-colors"
+        >
+          <Mail className="w-5 h-5" />
+          coachcratft.space@gmail.com
+        </a>
 
-              <div className="mt-6">
-                <p className="text-purple-300 mb-3">Love this tool? Support our work!</p>
-                <button
-                  onClick={handleDonate}
-                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-lg text-white font-semibold shadow-lg"
-                >
-                  <Heart className="w-5 h-5" />
-                  Donate
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-purple-500/20 pt-8 text-center">
-            <p className="text-purple-300">
-              © 2024 Invoice Maker Pro. Made with{" "}
-              <Heart className="w-4 h-4 inline text-pink-400" /> for the community.
-            </p>
-            <p className="text-purple-400 mt-2 font-semibold">
-              Always Free. Forever.
-            </p>
-          </div>
+        <div className="mt-6">
+          <p className="text-purple-300 mb-3">Love this tool? Support our work!</p>
+          <button
+            onClick={handleDonate}
+            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-lg text-white font-semibold shadow-lg"
+          >
+            <Heart className="w-5 h-5" />
+            Donate
+          </button>
         </div>
-      </footer>
+      </div>
+    </div>
+
+    {/* LEGAL LINKS */}
+    <div className="border-t border-purple-500/20 pt-6">
+      <div className="flex flex-col md:flex-row justify-center gap-6 text-center mb-6">
+        <a
+          href="/privacy-policy"
+          className="text-purple-300 hover:text-white transition-colors"
+        >
+          Privacy Policy
+        </a>
+        <a
+          href="/terms"
+          className="text-purple-300 hover:text-white transition-colors"
+        >
+          Terms & Conditions
+        </a>
+        <a
+          href="/cookie-policy"
+          className="text-purple-300 hover:text-white transition-colors"
+        >
+          Cookie Policy
+        </a>
+      </div>
+
+      <p className="text-purple-300 text-center">
+        © {new Date().getFullYear()} Invoice Maker Pro. Made with{" "}
+        <Heart className="w-4 h-4 inline text-pink-400" /> for the community.
+      </p>
+      <p className="text-purple-400 mt-2 font-semibold text-center">
+        Always Free. Forever.
+      </p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
