@@ -65,6 +65,7 @@ export default function RootLayout({
 
         {/* Add Google AdSense meta tag here */}
         <meta name="google-adsense-account" content="ca-pub-5911077996176521" />
+        <meta name="google-site-verification" content="6Y6VBAy65BXnF3kNRD4h-20UvA7Mry4mHBerAclnnzY" />
       </head>
       <body className="bg-gray-100 text-gray-900">
         {children}
