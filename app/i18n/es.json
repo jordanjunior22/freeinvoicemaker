@@ -1,0 +1,13 @@
+{
+  "invoice": "Factura",
+  "from": "De",
+  "to": "Para",
+  "invoiceDate": "Fecha de factura",
+  "dueDate": "Fecha de vencimiento",
+  "description": "Descripción",
+  "quantity": "Cantidad",
+  "price": "Precio",
+  "total": "Total",
+  "notes": "Notas",
+  "downloadPDF": "Descargar PDF"
+}

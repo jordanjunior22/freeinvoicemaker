@@ -1,0 +1,13 @@
+{
+  "invoice": "Invoice",
+  "from": "From",
+  "to": "To",
+  "invoiceDate": "Invoice Date",
+  "dueDate": "Due Date",
+  "description": "Description",
+  "quantity": "Qty",
+  "price": "Price",
+  "total": "Total",
+  "notes": "Notes",
+  "downloadPDF": "Download PDF"
+}
